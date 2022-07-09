@@ -56,7 +56,7 @@ function App(State) {
                   </Form>
                 </Panel>
                 <Divider/>
-                <ToDos/>
+                <ToDos state={State}/>
               </FlexboxGrid.Item>
             </FlexboxGrid>
           </Content>
