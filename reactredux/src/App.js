@@ -18,7 +18,6 @@ function App(State) {
   const updateState=txt=>setState({txt:txt})
   const createTodo=()=>{
      State.dispatch(addTodo(new TodoObject(generate(),state.txt)))
-     //  Alert.success(`Added aToDo --> ${state.txt}`)
       setState({txt:''})
     }
   return (
@@ -57,7 +56,7 @@ function App(State) {
                   </Form>
                 </Panel>
                 <Divider/>
-                <ToDos state={State}/>
+                <ToDos/>
               </FlexboxGrid.Item>
             </FlexboxGrid>
           </Content>

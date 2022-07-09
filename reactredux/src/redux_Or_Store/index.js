@@ -1,4 +1,4 @@
-import {addTodo,todoes,TodoObject} from './todos/index'
+import {addTodo,deleteTodo ,todoes,TodoObject} from './todos/index'
 import {combineReducers , createStore} from 'redux'
 import { composeWithDevTools } from "redux-devtools-extension";
 
@@ -8,6 +8,6 @@ const reducers=combineReducers({
 })
 const store=createStore(reducers,composeWithDevTools());
 export default store;
-export {addTodo,TodoObject}
+export {addTodo,deleteTodo, TodoObject}
 
 //dispach is a function that we pass what action returns to it==>>{type,todo} and then dispach will call our correct reducer for that
