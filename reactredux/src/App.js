@@ -1,69 +1,29 @@
 import React from 'react';
-import "rsuite/dist/rsuite.min.css";
 import './App.css';
-import {
- Divider,CustomProvider, Button,Container,Navbar,Header,Content,FlexboxGrid,Panel,Form,ButtonToolbar} from 'rsuite'
+
 //  connct is for connecting this component to redux Store
 import {connect} from 'react-redux'
 import {addTodo,TodoObject} from './redux_Or_Store/todos'
 import { useState } from "react";
 import {generate} from 'shortid'
 import ToDos from './components/ToDos'
+/////////////////////////////////////////////////////////
+
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 
 
-
+////packages///
+import "bootstrap/dist/css/bootstrap.min.css";
+///////
 function App(State) {
-  const [state,setState]=useState({txt:''});
-
-  const updateState=txt=>setState({txt:txt})
-  const createTodo=()=>{
-     State.dispatch(addTodo(new TodoObject(generate(),state.txt)))
-      setState({txt:''})
-    }
+ 
   return (
-   
-    <CustomProvider theme="dark">
-      <div className="main">
-        <Container>
-          <Header>
-            <Navbar appearance="inverse">
-              <Navbar.Brand>
-                <p className="navbar-brand">React Redux ToDo</p>
-              </Navbar.Brand>
-            </Navbar>
-          </Header>
-          <Content>
-            <FlexboxGrid justify="center">
-              <FlexboxGrid.Item colspan={12}>
-                <Panel header={<h3>Add ToDo</h3>} bordered>
-                  <Form fluid>
-                    <Form.Group>
-                      <Form.ControlLabel>
-                        What You Want To Do?
-                      </Form.ControlLabel>
-                      <Form.Control
-                        name="task"
-                        value={state.txt}
-                        onChange={updateState}
-                      ></Form.Control>
-                    </Form.Group>
-                    <Form.Group>
-                      <ButtonToolbar>
-                        <Button appearance="primary" onClick={createTodo}>
-                          Create
-                        </Button>
-                      </ButtonToolbar>
-                    </Form.Group>
-                  </Form>
-                </Panel>
-                <Divider/>
-                <ToDos state={State}/>
-              </FlexboxGrid.Item>
-            </FlexboxGrid>
-          </Content>
-        </Container>
-      </div>
-    </CustomProvider>
+   <>
+   <NavBar/>
+   <Home/>
+   </>
+    
    );
 }
 
