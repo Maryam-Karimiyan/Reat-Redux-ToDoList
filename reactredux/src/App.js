@@ -21,6 +21,7 @@ function App(State) {
       setState({txt:''})
     }
   return (
+   
     <CustomProvider theme="dark">
       <div className="main">
         <Container>
@@ -63,7 +64,7 @@ function App(State) {
         </Container>
       </div>
     </CustomProvider>
-  );
+   );
 }
 
 //we should invoke connect and pass our app component;

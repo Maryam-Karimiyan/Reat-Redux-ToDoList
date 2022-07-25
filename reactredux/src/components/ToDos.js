@@ -33,7 +33,7 @@ const ToDos = ({ todo ,dispach}) => {
   );
 };
 
-export default connect(({todos}) => {
-  console.log({todos});
-  return {todos:todos};
+export default connect(state=> {
+  console.log(state);
+  return state;
 })(ToDos);
