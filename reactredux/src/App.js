@@ -2,11 +2,8 @@ import React from 'react';
 import './App.css';
 
 //  connct is for connecting this component to redux Store
-import {connect} from 'react-redux'
-import {addTodo,TodoObject} from './redux_Or_Store/todos'
-import { useState } from "react";
-import {generate} from 'shortid'
-import ToDos from './components/ToDos'
+// import {connect} from 'react-redux'
+// import {generate} from 'shortid'
 /////////////////////////////////////////////////////////
 
 import NavBar from './components/NavBar';
@@ -16,7 +13,7 @@ import Home from './components/Home';
 ////packages///
 import "bootstrap/dist/css/bootstrap.min.css";
 ///////
-function App(State) {
+function App() {
  
   return (
    <>
@@ -30,8 +27,6 @@ function App(State) {
 //we should invoke connect and pass our app component;
 //state={type , todos} is the global redux store state;it gets the state and pass it to app-componnet
 //we have distructured state for todos and    ////anything we return here goes as a prop for App componnet
-export default connect(state=>{
-  return state
-})(App);
+export default App
 //we just connect app to redux store
 
