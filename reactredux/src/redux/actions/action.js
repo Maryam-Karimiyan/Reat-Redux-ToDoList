@@ -4,3 +4,16 @@ export const Add=(items)=>{
         payload:items
     }
 }
+export const Remove=(id)=>{
+    return {
+        type: "REMOVE_DATA",
+        payload:id
+    }
+}
+export const Update=(items,id)=>{
+    return {
+        type: "UPDATE_DATA",
+        payload:items,
+        _id:id
+    }
+}

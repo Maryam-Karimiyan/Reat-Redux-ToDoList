@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 
 //  connct is for connecting this component to redux Store
 // import {connect} from 'react-redux'
@@ -16,12 +16,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
  
   return (
-   <>
-   <NavBar/>
-   <Home/>
-   </>
-    
-   );
+    <div>
+      <NavBar />
+      <Home />
+    </div>
+  );
 }
 
 //we should invoke connect and pass our app component;

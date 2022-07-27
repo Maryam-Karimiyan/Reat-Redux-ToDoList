@@ -10,18 +10,23 @@ function NavBar() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" style={{background:"#232f3e"}}>
+        <AppBar position="static" style={{ background: "#74c239" }}>
           <Toolbar>
             <IconButton
               size="large"
               edge="start"
-              color="inherit"
+              color="default"
               aria-label="menu"
               sx={{ mr: 2 }}
             >
               <MenuIcon />
             </IconButton>
-            <Typography style={{textAlign:'center'}} variant="h3" component="div" sx={{ flexGrow: 1 }}>
+            <Typography
+              style={{ textAlign: "center", color: "#03243a" }}
+              variant="h3"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
               Redux To-Do App
             </Typography>
           </Toolbar>
