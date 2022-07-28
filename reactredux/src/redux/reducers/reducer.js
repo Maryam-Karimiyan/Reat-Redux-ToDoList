@@ -1,7 +1,7 @@
 const Initial_State={
     User_data:[]
 }
-export const todoreducers=(state=Initial_State,action)=>{
+const todoreducers=(state=Initial_State,action)=>{
     switch(action.type){
         case "ADD_DATA":
             return{
@@ -26,3 +26,5 @@ export const todoreducers=(state=Initial_State,action)=>{
         }
     return state;
 }
+
+export default todoreducers;
