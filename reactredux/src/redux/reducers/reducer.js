@@ -1,6 +1,7 @@
 const Initial_State={
     User_data:[]
 }
+// eslint - disable - next - line; 
 const todoreducers=(state=Initial_State,action)=>{
     switch(action.type){
         case "ADD_DATA":
